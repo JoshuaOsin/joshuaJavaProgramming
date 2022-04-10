@@ -18,7 +18,7 @@ public class Car {
     }
 
     public void start(){
-        System.out.println(brand + " " + model + " is starting");
+        System.out.println(brand + " " + model + " stared");
     }
 
     public void drive(){
