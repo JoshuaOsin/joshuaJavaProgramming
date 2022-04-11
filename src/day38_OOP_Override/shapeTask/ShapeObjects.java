@@ -1,6 +1,6 @@
 package day38_OOP_Override.shapeTask;
 
-public class ShapeObject {
+public class ShapeObjects {
     public static void main(String[] args) {
 
         Square square = new Square(10);
@@ -8,7 +8,7 @@ public class ShapeObject {
         System.out.println(square);
 
         // square.side = -10000000;
-        square.setSize(15);
+        square.setSide( 15 );
 
         System.out.println(square);
 
@@ -43,7 +43,6 @@ public class ShapeObject {
         System.out.println(circle);
 
         System.out.println(circle.getName());
-
 
     }
 }

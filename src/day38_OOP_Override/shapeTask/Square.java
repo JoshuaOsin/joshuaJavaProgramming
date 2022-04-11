@@ -2,41 +2,56 @@ package day38_OOP_Override.shapeTask;
 
 public class Square extends Shape{
 
-    private double size;
+    private double side;
 
-    public double getSize() {
-        return size;
+    public double getSide() {
+        return side;
     }
 
-    public void setSize(double size) {
-        if(size <= 0){
-            System.err.println("Invalid size: "+size);
+    public void setSide(double side) {
+        if(side <= 0){
+            System.err.println("Invalid Side: "+side);
             System.exit(1);
         }
-        this.size = size;
+
+        this.side = side;
     }
 
-    public Square(double size) {
+    //                              -100
+    public Square(double side) {
         super("Square");
-        this.size=size;
+        setSide(side);
     }
 
-    @Override
+
     public double area() {
-        return size*size;
+        return side * side;
     }
 
-    @Override
+
     public double perimeter() {
-        return 4*size;
+        return side * 4;
     }
 
-    @Override
+
     public String toString() {
         return "Square{" +
-                "size='" + size + '\'' +
-                "area='" + area() + '\'' +
-                "perimeter='" + perimeter() + '\'' +
+                "side=" + side +
+                ", area='" + area() + '\'' +
+                ", perimeter='" + perimeter() + '\'' +
                 '}';
     }
+
+
 }
+
+/*
+Square extends Shape:
+	variables:
+		side;
+	Encapsulate the field
+	Add a constructor to set the filed
+	area(): side * side
+	perimeter(): side * 4
+	toString(): side, area, perimeter
+ */

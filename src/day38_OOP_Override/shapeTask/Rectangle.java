@@ -2,55 +2,69 @@ package day38_OOP_Override.shapeTask;
 
 public class Rectangle extends Shape{
 
-    private double length;
-    private double width;
+    private double length, width;
 
     public double getLength() {
         return length;
+    }
+
+    public void setLength(double length) {
+        if(length <= 0){
+            System.err.println("Invalid Length: "+length);
+            System.exit(1);
+        }
+        this.length = length;
     }
 
     public double getWidth() {
         return width;
     }
 
-    public void setLength(double length) {
-        if(length <= 0){
-            System.err.println("Invalid length: "+length);
-            System.exit(1);
-        }
-        this.length = length;
-    }
-
     public void setWidth(double width) {
         if(width <= 0){
-            System.err.println("Invalid length: "+width);
+            System.err.println("Invalid Width: "+width);
             System.exit(1);
         }
         this.width = width;
     }
 
-    public Rectangle(double length , double width) {
+    public Rectangle( double length, double width) {
         super("Rectangle");
-        this.length= length;
-        this.width =width;
+        setLength(length);
+        setWidth(width);
     }
 
-    @Override
+
     public double area() {
-        return length*width;
+        return length * width;
     }
 
-    @Override
+
     public double perimeter() {
-        return 2*(length+width);
+        return 2 * ( length + width);
     }
+
 
     public String toString() {
         return "Rectangle{" +
-                "length='" + length + '\'' +
-                "width='" + width + '\'' +
-                "area='" + area() + '\'' +
-                "perimeter='" + perimeter() + '\'' +
+                "length=" + length +
+                ", width=" + width +
+                ", area='" + area() + '\'' +
+                ", perimeter='" + perimeter() + '\'' +
                 '}';
     }
+
+
 }
+
+/*
+Rectangle extends Shape:
+	variables:
+		length
+		width
+	Encapsulate the fields
+	Add a constructor to set the filed
+	area(): length * width
+	perimeter(): 2 * ( width + length)
+	toString(): length, width, area, perimeter
+ */

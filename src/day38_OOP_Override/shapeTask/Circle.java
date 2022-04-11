@@ -3,7 +3,7 @@ package day38_OOP_Override.shapeTask;
 public class Circle extends Shape{
 
     private double radius;
-    public static double  pi;
+    public static double pi = 3.14;
 
     public double getRadius() {
         return radius;
@@ -17,32 +17,43 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
-    public Circle(double radius) {
+    public Circle( double radius) {
         super("Circle");
-        this.radius= radius;
+        setRadius(radius);
     }
 
-    static {
-        pi = 3.14;
-    }
 
-    @Override
     public double area() {
-        return pi*radius*radius/2;
+        return radius* radius* pi;
     }
 
-    @Override
+
     public double perimeter() {
-        return 2*pi*radius;
+        return 2*radius*pi;
     }
 
-    @Override
+
     public String toString() {
         return "Circle{" +
-                "pi='" + pi + '\'' +
-                "radius='" + radius + '\'' +
-                "area='" + area() + '\'' +
-                "perimeter='" + perimeter() + '\'' +
+                "radius=" + radius +
+                ", pi='" + pi + '\'' +
+                ", area='" + area() + '\'' +
+                ", perimeter='" + perimeter() + '\'' +
                 '}';
     }
+
+
 }
+
+/*
+Circle extends Shape:
+		variables:
+			radius
+			pi (static)
+		Encapsulate the field
+		Add a constructor to set the filed
+		area(): radius * radius * pi
+		perimeter(): 2 * radius * pi
+		toString(): r, pi, area, perimeter
+ */
+
