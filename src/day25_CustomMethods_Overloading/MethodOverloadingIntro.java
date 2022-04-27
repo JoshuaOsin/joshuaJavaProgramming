@@ -18,6 +18,8 @@ public class MethodOverloadingIntro {
         System.out.println(sumOfNumbers(1, 2, 3));
         System.out.println(sumOfNumbers(1, 2, 3, 4));
 
+        System.out.println(sumOfNumbers(2.5,3.2,5.3));
+
     }
 
     public static int sumOfNumbers(int num1, int num2) {
@@ -43,4 +45,6 @@ public class MethodOverloadingIntro {
     public static double sumOfNumbers(double num1, double num2, double num3, double num4) {
         return num1 + num2 + num3 + num4;
     }
+
+
 }

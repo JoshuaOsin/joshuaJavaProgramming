@@ -1,6 +1,7 @@
 package day39_OOP_Recap.cydeoTask;
 
-public class Person {
+public class Person extends Human{
+
 
     private String  name;
     private int age;
@@ -38,6 +39,9 @@ public class Person {
         this.gender = gender;
     }
 
+    public Person() {
+    }
+
     public Person(String name, int age, char gender) {
         this.name = name;
         this.age = age;
@@ -63,4 +67,6 @@ public class Person {
                 ", gender=" + gender +
                 '}';
     }
+
+
 }

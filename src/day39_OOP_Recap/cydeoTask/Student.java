@@ -40,4 +40,14 @@ public class Student extends Person{
                 ", fieldOfStudy='" + fieldOfStudy + '\'' +
                 '}';
     }
+
+    public static void main(String[] args) {
+
+
+            Person person1 = new Person();
+
+            person1.getName();
+            person1.setAge(-20);
+
+    }
 }

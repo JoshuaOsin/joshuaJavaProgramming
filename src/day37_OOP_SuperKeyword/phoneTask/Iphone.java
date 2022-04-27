@@ -2,6 +2,7 @@ package day37_OOP_SuperKeyword.phoneTask;
 
 public final class Iphone extends Phone{
 
+
     public Iphone( String model, String size, double price, String color) {
         super("Apple", model, size, price, color);
     }

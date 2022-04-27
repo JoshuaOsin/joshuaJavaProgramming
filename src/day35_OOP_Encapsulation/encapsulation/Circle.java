@@ -14,8 +14,9 @@ public class Circle {
     }
 
     public void setRadius(double radius) {
-        if (radius<=0) {
-            return;
+        if (radius <=0) {
+            System.err.println("Invalid Entry");
+            System.exit(0);
         }
         this.radius = radius;
     }
@@ -25,6 +26,8 @@ public class Circle {
     }
 
     public double calcArea() {
+
+
         return pi*getRadius()*getRadius()/2;
     }
 

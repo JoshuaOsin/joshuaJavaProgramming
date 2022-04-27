@@ -30,9 +30,11 @@ public class ShapeObjects {
 
         System.out.println("------------------------");
 
+        System.out.println(Circle.pi);
+
         Circle circle = new Circle(7.5);
 
-        System.out.println(circle);
+
 
         //circle.radius = 15.5;
 
