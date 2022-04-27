@@ -1,4 +1,4 @@
-package day41_ExceptionsContinue;
+package day42_ExceptionsContinue;
 
 class FaddyException extends RuntimeException {
 
