@@ -23,9 +23,6 @@ public class MultiCatchBlocks {
         } catch (ClassCastException e) {
             System.out.println("Fourth catch block");
             e.printStackTrace();
-        } catch (RuntimeException e) { // parent exception type can not be placed before the child exception type
-            System.out.println("Fifth catch block");
-            e.printStackTrace();
         }
 
 
